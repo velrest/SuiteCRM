@@ -272,7 +272,7 @@ class Scheduler extends SugarBean {
 			$GLOBALS['log']->debug('----->got * months');
 		} elseif(strstr($mons, '*/')) {
 			$mult = str_replace('*/','',$mons);
-			$startMon = $timedate->fromDb(date_time_start)->month;
+			$startMon = $timedate->fromDb($focus->date_time_start)->month;
 			$startFrom = ($startMon % $mult);
 
             $compMons = array();
